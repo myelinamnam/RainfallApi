@@ -3,7 +3,7 @@
     /// <summary>
     /// The problem details dto.
     /// </summary>
-    public class ProblemDetailsDto
+    public class ErrorResponseDto
     {
         /// <summary>
         /// Gets or sets the error code.

@@ -43,7 +43,7 @@ namespace RainfallApi.Handlers
         {
             context.Response.ContentType = "application/json";
 
-            var result = new ProblemDetailsDto
+            var result = new ErrorResponseDto
             {
                 Title = "Internal Server Error",
                 Detail = ex.Message,

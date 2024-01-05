@@ -3,8 +3,16 @@ using System.Reflection;
 
 namespace RainfallApi.Extensions
 {
+    /// <summary>
+    /// Represents the Bearer authentication extension for Swagger/OpenAPI.
+    /// </summary>
     public static class BearerAuthExtension
     {
+        /// <summary>
+        /// Adds Bearer authentication for Swagger/OpenAPI to the specified service collection.
+        /// </summary>
+        /// <param name="services">The service collection to add the authentication service to.</param>
+        /// <returns>The modified service collection.</returns>
         public static IServiceCollection AddSwaggerBearer(this IServiceCollection services)
         {
             services.AddSwaggerGen(s =>
@@ -22,10 +30,10 @@ namespace RainfallApi.Extensions
                 });
                 s.AddServer(new OpenApiServer
                 {
-                    Url = "https://www.sorted.com",
+                    Url = "https://localhost:3000/",
                     Description = "Rainfall Api"
                 });
-                OpenApiTag tag = new OpenApiTag
+                OpenApiTag tag = new()
                 {
                     Name = "Rainfall",
                     Description = "Operations relating to rainfall"
@@ -63,7 +71,11 @@ namespace RainfallApi.Extensions
         }
 
 
-
+        /// <summary>
+        /// Configures Swagger with Bearer authentication middleware.
+        /// </summary>
+        /// <param name="app">The application builder.</param>
+        /// <returns>The modified application builder.</returns>
         public static IApplicationBuilder UseSwaggerWithUIBearer(this IApplicationBuilder app)
         {
             app.UseDeveloperExceptionPage();

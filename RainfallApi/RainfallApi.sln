@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.33913.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainfallApi", "RainfallApi\RainfallApi.csproj", "{AC0A88FA-37E6-48F9-800E-A11448165295}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RainfallApi", "RainfallApi\RainfallApi.csproj", "{AC0A88FA-37E6-48F9-800E-A11448165295}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainfallApi.Core", "RainfallApi.Core\RainfallApi.Core.csproj", "{CA8FA8E8-19BF-4B34-A4B5-7720EF2458AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RainfallApi.Core", "RainfallApi.Core\RainfallApi.Core.csproj", "{CA8FA8E8-19BF-4B34-A4B5-7720EF2458AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainfallApi.Application", "RainfallApi.Application\RainfallApi.Application.csproj", "{A343F9DF-FD02-469C-8271-6B4DBE2B804F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RainfallApi.Application", "RainfallApi.Application\RainfallApi.Application.csproj", "{A343F9DF-FD02-469C-8271-6B4DBE2B804F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainfallApi.Handler", "RainfallApi.Handler\RainfallApi.Handler.csproj", "{4869AC6A-6D87-48E9-A886-795B6991CD2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RainfallApi.Handler", "RainfallApi.Handler\RainfallApi.Handler.csproj", "{4869AC6A-6D87-48E9-A886-795B6991CD2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainfallApi.Infrastracture", "RainfallApi.Infrastracture\RainfallApi.Infrastracture.csproj", "{F91FFAE0-0979-47B3-93A0-5FA4C4094424}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RainfallApi.Infrastructure", "RainfallApi.Infrastracture\RainfallApi.Infrastructure.csproj", "{F91FFAE0-0979-47B3-93A0-5FA4C4094424}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
