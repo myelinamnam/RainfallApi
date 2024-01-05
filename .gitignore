@@ -12,3 +12,6 @@
 /RainfallApi/.vs/ProjectEvaluation
 /RainfallApi/RainfallApi/bin/Debug/net7.0
 /RainfallApi/RainfallApi.Core/bin/Debug/net7.0
+/RainfallApi/RainfallApi.Application/bin/Debug/net7.0
+/RainfallApi/RainfallApi.Handler/bin/Debug/net7.0
+/RainfallApi/RainfallApi.Infrastracture/bin/Debug/net7.0
