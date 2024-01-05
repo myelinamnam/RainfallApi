@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/RainfallApi/RainfallApi/obj
+/.vs
+/RainfallApi/.vs/RainfallApi
+/RainfallApi/RainfallApi.Application/obj
+/RainfallApi/RainfallApi.Core/obj
+/RainfallApi/RainfallApi.Handler/obj
+/RainfallApi/RainfallApi.Infrastracture/obj
