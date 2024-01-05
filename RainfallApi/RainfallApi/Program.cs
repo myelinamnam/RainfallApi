@@ -1,25 +1,36 @@
-var builder = WebApplication.CreateBuilder(args);
+using MediatR;
+using Microsoft.AspNetCore.HttpOverrides;
+using RainfallApi.Core.Models;
+using RainfallApi.Extensions;
+using RainfallApi.Handlers;
+using System.Reflection;
 
-// Add services to the container.
-builder.Services.AddRazorPages();
+var builder = WebApplication.CreateBuilder(args);
+builder.Configuration.AddDotNetEnvironmentVariables("WebApi__");
+builder.Configuration.AddDotNetDotEnvVariables(optional: true);
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+builder.Services.AddHttpClient();
+builder.Services.AddOptions();
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("WebApi"));
+builder.Services.AddForwardedHeaders();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddCors();
+builder.Services.AddControllers();
+builder.Services.AddSwaggerBearer();
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+app.UseSwaggerWithUIBearer();
+app.UseForwardedHeaders(new ForwardedHeadersOptions
 {
-    app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
-
+    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+});
 app.UseHttpsRedirection();
-app.UseStaticFiles();
-
 app.UseRouting();
-
+app.UseCorsWithDefaultPolicy();
 app.UseAuthorization();
-
-app.MapRazorPages();
-
+app.UseMiddleware<ExceptionHandleMiddleware>();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
 app.Run();
