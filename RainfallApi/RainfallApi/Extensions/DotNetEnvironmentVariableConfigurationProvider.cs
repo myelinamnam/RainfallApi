@@ -4,7 +4,7 @@
     {
         private readonly string _envVarPrefix;
 
-        public DotNetEnvironmentVariableConfigurationProvider(string prefix = "Randem")
+        public DotNetEnvironmentVariableConfigurationProvider(string prefix = "WebApi")
         {
             _envVarPrefix = prefix;
             Data = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);

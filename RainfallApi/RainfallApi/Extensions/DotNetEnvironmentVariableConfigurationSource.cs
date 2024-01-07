@@ -4,7 +4,7 @@
     {
         private readonly string _environmentVariablePrefix;
 
-        public DotNetEnvironmentVariableConfigurationSource(string prefix = "Randem")
+        public DotNetEnvironmentVariableConfigurationSource(string prefix = "WebApi")
         {
             _environmentVariablePrefix = prefix;
         }

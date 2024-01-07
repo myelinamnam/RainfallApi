@@ -46,7 +46,7 @@ namespace RainfallApi.Extensions
                 {
                     Description = "ApiKey must appear in header",
                     Type = SecuritySchemeType.ApiKey,
-                    Name = "XApiKey",
+                    Name = "X-Auth-Token",
                     In = ParameterLocation.Header,
                     Scheme = "ApiKeyScheme"
                 });

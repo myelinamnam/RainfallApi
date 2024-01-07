@@ -1,9 +1,10 @@
 ﻿using MediatR;
+using RainfallApi.Core.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace RainfallApi.Handler.Commands
 {
-    public class GetRainfallReadingCommandHandler : IRequest<string>
+    public class GetRainfallReadingCommandHandler : IRequest<GetRainfallReadingResponse>
     {
         public int stationId { get; set; }
         public int count { get; set; }

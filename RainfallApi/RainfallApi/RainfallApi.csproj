@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AspNetCore.Authentication.ApiKey" Version="8.0.0" />
     <PackageReference Include="DotNetEnv" Version="2.5.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
@@ -18,6 +19,8 @@
   <ItemGroup>
     <ProjectReference Include="..\RainfallApi.Application\RainfallApi.Application.csproj" />
     <ProjectReference Include="..\RainfallApi.Core\RainfallApi.Core.csproj" />
+    <ProjectReference Include="..\RainfallApi.Handler\RainfallApi.Handler.csproj" />
+    <ProjectReference Include="..\RainfallApi.Helper\RainfallApi.Helper.csproj" />
     <ProjectReference Include="..\RainfallApi.Infrastracture\RainfallApi.Infrastructure.csproj" />
   </ItemGroup>
 

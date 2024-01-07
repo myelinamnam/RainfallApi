@@ -2,6 +2,6 @@
 {
     public class AppSettings
     {
-        public string XAuthToken { get; set; }
+        public string XApiKey { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace RainfallApi.Infrastructure.Repositories
             _mediator = mediator;
         }
 
-        public async Task<string> Get([Range(1, 100, ErrorMessage = "Value for {stationId} must be between {1} and {100}.")][Required(ErrorMessage = "stationId is required")] int stationId, int count = 10)
+        public async Task<GetRainfallReadingResponse> Get([Range(1, 100, ErrorMessage = "Value for {stationId} must be between {1} and {100}.")][Required(ErrorMessage = "stationId is required")] int stationId, int count = 10)
         {
             return await _mediator.Send(new GetRainfallReadingCommandHandler(stationId, count));
         }

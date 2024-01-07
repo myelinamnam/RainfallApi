@@ -1,4 +1,5 @@
 ﻿using DotNetEnv;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RainfallApi.Application.Interfaces;
 using RainfallApi.Core.Models;
@@ -39,9 +40,7 @@ namespace RainfallApi.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        [Produces("application/json")]
-        [Consumes("application/json")]
-        public async Task<string> Get([Range(1, 100, ErrorMessage = "Value for {stationId} must be between {1} and {100}.")] [Required(ErrorMessage = "stationId is required")] int stationId, int count = 10)
+        public async Task<GetRainfallReadingResponse> Get([Range(1, 100, ErrorMessage = "Value for {stationId} must be between {1} and {100}.")] [Required(ErrorMessage = "stationId is required")] int stationId, int count = 10)
         {
             return await _unitOfWork.Rainfall.Get(stationId, count);
         }
